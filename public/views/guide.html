@@ -1,0 +1,14 @@
+<div class="jumbotron text-center">
+  <h1>All the guides<h1>
+
+  <form class="form-inline">
+      <input ng-model="query" type="text" placeholder="Filter by" autofocus>
+  </form>
+
+  <ul ng-repeat="guide in guidesData.guides| filter:query" style="list-style: none;">
+    <li>
+      <h1>{{ guide.name }}</h1>
+      <p>{{ guide.age}}</p>
+    </li>
+  </ul>
+</div>
